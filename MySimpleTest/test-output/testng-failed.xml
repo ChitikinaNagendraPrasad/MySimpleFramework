@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Automation Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="headless" value="false"/>
+  <parameter name="baseURL" value="https://automationexercise.com"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="gridURL" value="http://localhost:4444/wd/hub"/>
+  <parameter name="runMode" value="local"/>
+  <listeners>
+    <listener class-name="com.test.Listener.MyTestListener"/>
+  </listeners>
+  <test thread-count="3" parallel="tests" name="Test2(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.test.TestCases.TestCases_1">
+        <methods>
+          <include name="verifyLoginWithInvalidCredentials" invocation-numbers="0 2"/>
+          <include name="setUpPages"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.test.TestCases.TestCases_1 -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="3" parallel="tests" name="Test3(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="com.test.TestCases.TestCases_1">
+        <methods>
+          <include name="verifySignupWithExistingEmail" invocation-numbers="2"/>
+          <include name="verifyLoginWithInvalidCredentials" invocation-numbers="0 1 2"/>
+          <include name="setUpPages"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.test.TestCases.TestCases_1 -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [Automation Suite] -->
