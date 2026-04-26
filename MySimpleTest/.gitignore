@@ -1,7 +1,6 @@
 /target/
 /Reports/
 
-
 # Ignore all generated files inside Reports
 Reports/*
 
