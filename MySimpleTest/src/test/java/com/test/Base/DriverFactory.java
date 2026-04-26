@@ -14,34 +14,41 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public final class DriverFactory {
+public final class DriverFactory
+{
 
-    private DriverFactory() {
+    private DriverFactory()
+    {
         // prevent instantiation
     }
 
-    public static WebDriver createDriver(
-            String browser,
-            String runMode,
-            String gridURL,
-            String headless) {
+    public static WebDriver createDriver(String browser, String runMode, String gridURL, String headless)
+    {
 
-        try {
-            if ("grid".equalsIgnoreCase(runMode)) {
+        try
+        {
+            if (runMode.equalsIgnoreCase("grid"))
+            {
                 return createRemoteDriver(browser, gridURL, headless);
-            } else {
+            }
+            else
+            {
                 return createLocalDriver(browser, headless);
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             throw new RuntimeException("Failed to create WebDriver", e);
         }
     }
 
     // ================= LOCAL =================
 
-    private static WebDriver createLocalDriver(String browser, String headless) {
+    private static WebDriver createLocalDriver(String browser, String headless)
+    {
 
-        switch (browser.toLowerCase()) {
+        switch (browser.toLowerCase())
+        {
 
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -60,12 +67,13 @@ public final class DriverFactory {
 
     // ================= GRID =================
 
-    private static WebDriver createRemoteDriver(
-            String browser, String gridURL, String headless) throws Exception {
+    private static WebDriver createRemoteDriver(String browser, String gridURL, String headless) throws Exception
+    {
 
         URL grid = new URL(gridURL);
 
-        switch (browser.toLowerCase()) {
+        switch (browser.toLowerCase())
+        {
 
             case "firefox":
                 return new RemoteWebDriver(grid, getFirefoxOptions(headless));
@@ -81,7 +89,8 @@ public final class DriverFactory {
 
     // ================= OPTIONS =================
 
-    private static ChromeOptions getChromeOptions(String headless) {
+    private static ChromeOptions getChromeOptions(String headless)
+    {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--disable-notifications");
@@ -90,31 +99,40 @@ public final class DriverFactory {
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
-        if ("true".equalsIgnoreCase(headless)) {
+        if ("true".equalsIgnoreCase(headless))
+        {
             options.addArguments("--headless=new");
             options.addArguments("--window-size=1920,1080");
-        } else {
+        }
+        else
+        {
             options.addArguments("--start-maximized");
         }
 
         return options;
     }
 
-    private static FirefoxOptions getFirefoxOptions(String headless) {
+    private static FirefoxOptions getFirefoxOptions(String headless)
+    {
         FirefoxOptions options = new FirefoxOptions();
-        if ("true".equalsIgnoreCase(headless)) {
+        if ("true".equalsIgnoreCase(headless))
+        {
             options.addArguments("-headless");
         }
         return options;
     }
 
-    private static EdgeOptions getEdgeOptions(String headless) {
+    private static EdgeOptions getEdgeOptions(String headless)
+    {
         EdgeOptions options = new EdgeOptions();
 
-        if ("true".equalsIgnoreCase(headless)) {
+        if ("true".equalsIgnoreCase(headless))
+        {
             options.addArguments("--headless=new");
             options.addArguments("--window-size=1920,1080");
-        } else {
+        }
+        else
+        {
             options.addArguments("--start-maximized");
         }
 
