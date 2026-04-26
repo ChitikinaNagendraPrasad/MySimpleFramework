@@ -178,7 +178,8 @@ public class MyTestListener implements ITestListener, ISuiteListener
         suiteTotal = suitePassed + suiteFailed + suiteSkipped;
         masterDashboard.info("🧪 Total Tests        : " + suiteTotal)
                        .pass("✅ Passed             : " + suitePassed)
-                       .fail("❌ Failed             : " + suiteFailed).warning("⚠ Skipped            : " + suiteSkipped)
+                       .fail("❌ Failed             : " + suiteFailed)
+                       .warning("⚠ Skipped            : " + suiteSkipped)
                        .info("⏱ Total Elapsed Time : " + elapsedTime);
         masterExtent.setSystemInfo("Total Tests", String.valueOf(suiteTotal));
         masterExtent.setSystemInfo("Passed", String.valueOf(suitePassed));
