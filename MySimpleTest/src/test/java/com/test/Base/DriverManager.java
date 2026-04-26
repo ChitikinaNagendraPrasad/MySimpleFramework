@@ -3,32 +3,43 @@ package com.test.Base;
 
 import org.openqa.selenium.WebDriver;
 
-public final class DriverManager {
+public final class DriverManager
+{
 
-    private DriverManager() {
+    private DriverManager()
+    {
         // prevent instantiation
     }
 
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    public static WebDriver getDriver() {
+    public static WebDriver getDriver()
+    {
         return driver.get();
     }
 
-    public static void setDriver(WebDriver webDriver) {
+    public static void setDriver(WebDriver webDriver)
+    {
         driver.set(webDriver);
     }
 
     // ✅ Safe quit (no TimeoutException)
-    public static void quitDriver() {
+    public static void quitDriver()
+    {
         WebDriver webDriver = driver.get();
-        try {
-            if (webDriver != null) {
+        try
+        {
+            if (webDriver != null)
+            {
                 webDriver.quit();
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.out.println("Driver already closed. Ignoring quit exception.");
-        } finally {
+        }
+        finally
+        {
             driver.remove(); // VERY IMPORTANT
         }
     }
