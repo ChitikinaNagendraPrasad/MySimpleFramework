@@ -1,2 +1,13 @@
 /target/
 /Reports/
+
+
+# Ignore all generated files inside Reports
+Reports/*
+
+# Ignore all generated files inside Screenshots
+Screenshots/*
+
+# But DO NOT ignore placeholder files
+!Reports/.gitkeep
+!Screenshots/.gitkeep
