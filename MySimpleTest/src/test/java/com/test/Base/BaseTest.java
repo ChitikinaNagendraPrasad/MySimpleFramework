@@ -11,7 +11,6 @@ import org.testng.annotations.Parameters;
 
 public class BaseTest
 {
-
     @Parameters({ "browser", "runMode", "gridURL", "baseURL", "headless" }) 
     @BeforeMethod(alwaysRun = true)
     public void setUp(
