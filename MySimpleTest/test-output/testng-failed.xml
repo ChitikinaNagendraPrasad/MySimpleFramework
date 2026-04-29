@@ -5,38 +5,10 @@
   <parameter name="baseURL" value="https://automationexercise.com"/>
   <parameter name="browser" value="chrome"/>
   <parameter name="gridURL" value="http://localhost:4444/wd/hub"/>
-  <parameter name="runMode" value="grid"/>
+  <parameter name="runMode" value="local"/>
   <listeners>
     <listener class-name="com.test.Listener.MyTestListener"/>
   </listeners>
-  <test thread-count="3" parallel="tests" name="Test3(failed)">
-    <parameter name="browser" value="Edge"/>
-    <classes>
-      <class name="com.test.TestCases.TestCases_1">
-        <methods>
-          <include name="verifySignupWithExistingEmail"/>
-          <include name="verifyLoginWithInvalidCredentials"/>
-          <include name="setUpPages"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.test.TestCases.TestCases_1 -->
-    </classes>
-  </test> <!-- Test3(failed) -->
-  <test thread-count="3" parallel="tests" name="Test1(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="com.test.TestCases.TestCases_1">
-        <methods>
-          <include name="verifySignupWithExistingEmail"/>
-          <include name="verifyLoginWithInvalidCredentials"/>
-          <include name="setUpPages"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.test.TestCases.TestCases_1 -->
-    </classes>
-  </test> <!-- Test1(failed) -->
   <test thread-count="3" parallel="tests" name="Test2(failed)">
     <parameter name="browser" value="Firefox"/>
     <classes>

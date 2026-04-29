@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   selenium-hub:
     image: selenium/hub:4.20.0
@@ -41,5 +39,16 @@ services:
     image: selenium-grid-tests
     depends_on:
       - selenium-hub
+      - chrome
+      - firefox
+      - edge
     environment:
       - RUN_MODE=grid
+    volumes:
+      - ./Reports:/app/Reports
+    entrypoint: >
+      sh -c "
+      echo 'Waiting for Grid...' &&
+      sleep 15 &&
+      mvn test
+      "

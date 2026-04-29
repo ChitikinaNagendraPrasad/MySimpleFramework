@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="14" failed="0" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-28T01:08:54 IST" name="Automation Suite" finished-at="2026-04-28T01:10:23 IST" duration-ms="89231">
+  <suite started-at="2026-04-29T07:51:22 IST" name="Automation Suite" finished-at="2026-04-29T07:59:16 IST" duration-ms="474289">
     <groups>
     </groups>
-    <test started-at="2026-04-28T01:08:54 IST" name="Test1" finished-at="2026-04-28T01:10:23 IST" duration-ms="89231">
+    <test started-at="2026-04-29T07:51:22 IST" name="Test2" finished-at="2026-04-29T07:56:12 IST" duration-ms="290044">
       <class name="com.test.TestCases.TestCases_1">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:08:54 IST" name="setUp" finished-at="2026-04-28T01:09:33 IST" duration-ms="38730" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:53:33 IST" duration-ms="130861" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Firefox]]>
               </value>
             </param>
             <param index="1">
@@ -38,11 +38,89 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:08:54 IST" name="setUp" finished-at="2026-04-28T01:09:26 IST" duration-ms="31729" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:53:57 IST" duration-ms="154469" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to create WebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to create WebDriver
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:41)
+at com.test.Base.BaseTest.setUp(BaseTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Failed to read marionette port 
+Host info: host: 'BUDDI_DESKTOP', ip: '192.168.1.37'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {args: [-headless], prefs: {remote.active-protocols: 1}}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:195)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:290)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:137)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:118)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:94)
+at com.test.Base.DriverFactory.createLocalDriver(DriverFactory.java:55)
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:36)
+... 15 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:53:26 IST" duration-ms="123408" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
               </value>
             </param>
             <param index="1">
@@ -69,82 +147,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:08:54 IST" name="setUp" finished-at="2026-04-28T01:09:30 IST" duration-ms="36037" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[local]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[https://automationexercise.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:27 IST" name="setUpPages" finished-at="2026-04-28T01:09:27 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:26 IST" name="setUpPages" finished-at="2026-04-29T07:53:26 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPages -->
-        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:27 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-28T01:09:48 IST" duration-ms="20831" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[nag@nag.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[wrongpass]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidCredentials -->
-        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:30 IST" name="setUpPages" finished-at="2026-04-28T01:09:30 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpPages -->
-        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:30 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-28T01:09:47 IST" duration-ms="16708" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[user@demo.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[password]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginWithInvalidCredentials -->
-        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:33 IST" name="setUpPages" finished-at="2026-04-28T01:09:33 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpPages -->
-        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:33 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-28T01:09:48 IST" duration-ms="14817" status="PASS">
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:26 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:53:57 IST" duration-ms="30669" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -160,136 +167,274 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLoginWithInvalidCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:47 IST" name="tearDown" finished-at="2026-04-28T01:09:55 IST" duration-ms="8211" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:48 IST" name="tearDown" finished-at="2026-04-28T01:09:55 IST" duration-ms="7517" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:48 IST" name="tearDown" finished-at="2026-04-28T01:09:56 IST" duration-ms="7356" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:56 IST" name="setUp" finished-at="2026-04-28T01:10:09 IST" duration-ms="13132" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[local]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[https://automationexercise.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:56 IST" name="setUp" finished-at="2026-04-28T01:10:02 IST" duration-ms="6911" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[local]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[https://automationexercise.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:09:56 IST" name="setUp" finished-at="2026-04-28T01:10:03 IST" duration-ms="7400" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[local]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[https://automationexercise.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:02 IST" name="setUpPages" finished-at="2026-04-28T01:10:02 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:33 IST" name="setUpPages" finished-at="2026-04-29T07:53:33 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPages -->
-        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:02 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-28T01:10:21 IST" duration-ms="19017" status="PASS">
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:33 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:54:03 IST" duration-ms="29447" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[DemoUser]]>
+                <![CDATA[nag@nag.com]]>
               </value>
             </param>
             <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:58 IST" name="setUpPages" finished-at="2026-04-29T07:53:58 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:58 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:53:58 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
               <value>
                 <![CDATA[user@demo.com]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to create WebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to create WebDriver
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:41)
+at com.test.Base.BaseTest.setUp(BaseTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Failed to read marionette port 
+Host info: host: 'BUDDI_DESKTOP', ip: '192.168.1.37'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {args: [-headless], prefs: {remote.active-protocols: 1}}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:195)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:290)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:137)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:118)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:94)
+at com.test.Base.DriverFactory.createLocalDriver(DriverFactory.java:55)
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:36)
+... 15 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:58 IST" name="tearDown" finished-at="2026-04-29T07:54:28 IST" duration-ms="30126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:53:58 IST" name="tearDown" finished-at="2026-04-29T07:53:58 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:54:03 IST" name="tearDown" finished-at="2026-04-29T07:54:33 IST" duration-ms="30186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:54:33 IST" name="setUp" finished-at="2026-04-29T07:55:40 IST" duration-ms="67028" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySignupWithExistingEmail -->
-        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:03 IST" name="setUpPages" finished-at="2026-04-28T01:10:03 IST" duration-ms="12" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:54:33 IST" name="setUp" finished-at="2026-04-29T07:55:32 IST" duration-ms="59230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:54:33 IST" name="setUp" finished-at="2026-04-29T07:55:42 IST" duration-ms="68877" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:32 IST" name="setUpPages" finished-at="2026-04-29T07:55:32 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPages -->
-        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:03 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-28T01:10:18 IST" duration-ms="15399" status="PASS">
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:32 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:55:32 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TestUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[existing@test.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to create WebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to create WebDriver
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:41)
+at com.test.Base.BaseTest.setUp(BaseTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Failed to read marionette port 
+Host info: host: 'BUDDI_DESKTOP', ip: '192.168.1.37'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {args: [-headless], prefs: {remote.active-protocols: 1}}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:195)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:290)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:137)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:118)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:94)
+at com.test.Base.DriverFactory.createLocalDriver(DriverFactory.java:55)
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:36)
+... 15 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupWithExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:32 IST" name="tearDown" finished-at="2026-04-29T07:56:06 IST" duration-ms="33228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:40 IST" name="setUpPages" finished-at="2026-04-29T07:55:40 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:40 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:55:40 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -302,14 +447,398 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to create WebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to create WebDriver
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:41)
+at com.test.Base.BaseTest.setUp(BaseTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Failed to read marionette port 
+Host info: host: 'BUDDI_DESKTOP', ip: '192.168.1.37'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {args: [-headless], prefs: {remote.active-protocols: 1}}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:195)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:290)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:137)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:118)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:94)
+at com.test.Base.DriverFactory.createLocalDriver(DriverFactory.java:55)
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:36)
+... 15 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignupWithExistingEmail -->
-        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:09 IST" name="setUpPages" finished-at="2026-04-28T01:10:09 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:40 IST" name="tearDown" finished-at="2026-04-29T07:56:10 IST" duration-ms="30336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:42 IST" name="setUpPages" finished-at="2026-04-29T07:55:42 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpPages -->
-        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:09 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-28T01:10:20 IST" duration-ms="11178" status="PASS">
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:42 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:55:42 IST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user@demo.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Failed to create WebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Failed to create WebDriver
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:41)
+at com.test.Base.BaseTest.setUp(BaseTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Failed to read marionette port 
+Host info: host: 'BUDDI_DESKTOP', ip: '192.168.1.37'
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [null, newSession {capabilities=[Capabilities {acceptInsecureCerts: true, browserName: firefox, moz:firefoxOptions: {args: [-headless], prefs: {remote.active-protocols: 1}}}]}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:75)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:61)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:195)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:290)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:213)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:137)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:118)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:98)
+at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:94)
+at com.test.Base.DriverFactory.createLocalDriver(DriverFactory.java:55)
+at com.test.Base.DriverFactory.createDriver(DriverFactory.java:36)
+... 15 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupWithExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@23ad71bf]" started-at="2026-04-29T07:55:42 IST" name="tearDown" finished-at="2026-04-29T07:56:12 IST" duration-ms="30120" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.test.TestCases.TestCases_1 -->
+    </test> <!-- Test2 -->
+    <test started-at="2026-04-29T07:51:22 IST" name="Test1" finished-at="2026-04-29T07:59:14 IST" duration-ms="471889">
+      <class name="com.test.TestCases.TestCases_1">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:54:32 IST" duration-ms="189236" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:55:06 IST" duration-ms="223056" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:54:10 IST" duration-ms="167010" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:54:10 IST" name="setUpPages" finished-at="2026-04-29T07:54:10 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:54:10 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:56:10 IST" duration-ms="120066" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:54:32 IST" name="setUpPages" finished-at="2026-04-29T07:54:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:54:32 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:55:52 IST" duration-ms="80646" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nag@nag.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:55:06 IST" name="setUpPages" finished-at="2026-04-29T07:55:06 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:55:06 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:56:26 IST" duration-ms="80514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user@demo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:55:52 IST" name="tearDown" finished-at="2026-04-29T07:56:23 IST" duration-ms="31103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:56:10 IST" name="tearDown" finished-at="2026-04-29T07:56:41 IST" duration-ms="31181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:56:26 IST" name="tearDown" finished-at="2026-04-29T07:56:58 IST" duration-ms="32025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:56:58 IST" name="setUp" finished-at="2026-04-29T07:58:37 IST" duration-ms="98778" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:56:58 IST" name="setUp" finished-at="2026-04-29T07:58:37 IST" duration-ms="98677" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:56:58 IST" name="setUp" finished-at="2026-04-29T07:57:42 IST" duration-ms="44232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:57:42 IST" name="setUpPages" finished-at="2026-04-29T07:57:42 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:57:42 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:58:48 IST" duration-ms="65611" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -325,19 +854,393 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignupWithExistingEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:18 IST" name="tearDown" finished-at="2026-04-28T01:10:23 IST" duration-ms="4819" status="PASS">
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:58:37 IST" name="setUpPages" finished-at="2026-04-29T07:58:37 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:58:37 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:58:48 IST" duration-ms="11009" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user@demo.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupWithExistingEmail -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:58:37 IST" name="setUpPages" finished-at="2026-04-29T07:58:37 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:58:37 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:58:48 IST" duration-ms="10783" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nagendra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nage@nag.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupWithExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:58:48 IST" name="tearDown" finished-at="2026-04-29T07:59:14 IST" duration-ms="26206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:20 IST" name="tearDown" finished-at="2026-04-28T01:10:23 IST" duration-ms="3281" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:58:48 IST" name="tearDown" finished-at="2026-04-29T07:59:11 IST" duration-ms="22731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1903b5d]" started-at="2026-04-28T01:10:21 IST" name="tearDown" finished-at="2026-04-28T01:10:23 IST" duration-ms="1709" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@1e957e2f]" started-at="2026-04-29T07:58:48 IST" name="tearDown" finished-at="2026-04-29T07:59:10 IST" duration-ms="22249" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.test.TestCases.TestCases_1 -->
     </test> <!-- Test1 -->
+    <test started-at="2026-04-29T07:51:22 IST" name="Test3" finished-at="2026-04-29T07:59:16 IST" duration-ms="474289">
+      <class name="com.test.TestCases.TestCases_1">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:52:56 IST" duration-ms="93995" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:53:11 IST" duration-ms="108368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:51:22 IST" name="setUp" finished-at="2026-04-29T07:52:32 IST" duration-ms="69721" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:52:42 IST" name="setUpPages" finished-at="2026-04-29T07:52:42 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:52:42 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:55:55 IST" duration-ms="192159" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:52:56 IST" name="setUpPages" finished-at="2026-04-29T07:52:56 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:52:56 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:56:06 IST" duration-ms="190043" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nag@nag.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:53:11 IST" name="setUpPages" finished-at="2026-04-29T07:53:11 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifyLoginWithInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:53:11 IST" name="verifyLoginWithInvalidCredentials" data-provider="invalidLoginData" finished-at="2026-04-29T07:55:51 IST" duration-ms="160230" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[user@demo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:55:51 IST" name="tearDown" finished-at="2026-04-29T07:56:22 IST" duration-ms="31170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:55:55 IST" name="tearDown" finished-at="2026-04-29T07:56:26 IST" duration-ms="31093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:56:06 IST" name="tearDown" finished-at="2026-04-29T07:56:38 IST" duration-ms="31070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:56:38 IST" name="setUp" finished-at="2026-04-29T07:58:30 IST" duration-ms="112773" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:56:38 IST" name="setUp" finished-at="2026-04-29T07:58:34 IST" duration-ms="116093" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:56:38 IST" name="setUp" finished-at="2026-04-29T07:58:32 IST" duration-ms="114008" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[http://localhost:4444/wd/hub]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[https://automationexercise.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:58:30 IST" name="setUpPages" finished-at="2026-04-29T07:58:30 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:58:30 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:59:03 IST" duration-ms="32519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nagendra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[nage@nag.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupWithExistingEmail -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:58:32 IST" name="setUpPages" finished-at="2026-04-29T07:58:32 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:58:32 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:59:01 IST" duration-ms="29192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user@demo.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupWithExistingEmail -->
+        <test-method is-config="true" signature="setUpPages()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:58:34 IST" name="setUpPages" finished-at="2026-04-29T07:58:34 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpPages -->
+        <test-method signature="verifySignupWithExistingEmail(java.lang.String,java.lang.String)[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:58:34 IST" name="verifySignupWithExistingEmail" data-provider="existingSignupData" finished-at="2026-04-29T07:58:59 IST" duration-ms="24872" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[TestUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[existing@test.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupWithExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:58:59 IST" name="tearDown" finished-at="2026-04-29T07:59:12 IST" duration-ms="13367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:59:01 IST" name="tearDown" finished-at="2026-04-29T07:59:16 IST" duration-ms="14743" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.TestCases.TestCases_1@629a9f26]" started-at="2026-04-29T07:59:03 IST" name="tearDown" finished-at="2026-04-29T07:59:16 IST" duration-ms="13364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.test.TestCases.TestCases_1 -->
+    </test> <!-- Test3 -->
   </suite> <!-- Automation Suite -->
 </testng-results>
